@@ -12,7 +12,8 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-#ImgC{
-  max-height: 450px;
-   object-fit: cover;
+#image_x{
+  max-height: 550px;
+  width:900px;
+  object-fit: fill;
 }
