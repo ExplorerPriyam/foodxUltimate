@@ -57,7 +57,7 @@ const Card = (props) => {
                         return <option key={data} value={data}>{data}</option>
                        })}
                     </select>
-                    <div className='d-inline  h-100 fs-3'>{finalPrice}Rs.</div>
+                    <div className='d-inline  h-100 fs-2'>{finalPrice}Rs.</div>
                 </div>
             </div>
            <div className='justify-center container mb-2'>
