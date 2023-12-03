@@ -34,7 +34,7 @@ const Home = () => {
           <Carousel.Item >
             <img
               className="d-block w-100"
-              src="https://source.unsplash.com/random/1378x1080/?fruit"
+              src="https://source.unsplash.com/random/1378x1080/?pizza"
               alt="First slide"
               id='image_x'
             />
@@ -43,7 +43,7 @@ const Home = () => {
           <Carousel.Item >
             <img
               className="d-block w-100"
-              src="https://source.unsplash.com/random/1378x1080/?momo"
+              src="https://source.unsplash.com/random/1378x1080/?momos"
               alt="Second slide"
               id='image_x'
             />

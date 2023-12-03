@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import {useNavigate, Link } from 'react-router-dom'
 const Signup = () => {
     const[credentials,setcredentials]=useState({name:"",email:"",password:"",currentAdress:""})//geolocation is given as current Address
+    let navigate = useNavigate()
     const handleSubmit=async(e)=>{
             e.preventDefault();
             const response=await fetch("http://localhost:5000/api/createuser",{
@@ -20,6 +21,11 @@ const Signup = () => {
             console.log(json);
             if(!json.success){
                 alert("Enter Valid Credentitals")
+            }
+            else{
+                   //save the auth toke to local storage and redirect
+      localStorage.setItem('token', json.authToken)
+      navigate("/login")
             }
     }
     const onChange=(event)=>{
@@ -46,7 +52,7 @@ const Signup = () => {
                         <label htmlFor="name">Location</label>
                         <input type="text" className="form-control" placeholder="Enter Your Address"  name='currentAdress' value={credentials.currentAdress} onChange={onChange}/>
                     </div>
-                    <button type="submit" className="m-3 btn btn-light ">Welcome to FoodX🍽️</button>
+                   <button type="submit" className="m-3 btn btn-light ">Welcome to FoodX🍽️</button> 
                     <Link to='/login' className='m-3 btn btn-danger'>Already a FoodX User🫰</Link>
                 </form>
             </div>
