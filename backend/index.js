@@ -5,7 +5,7 @@ const port = 5000
 const mongoDB = require("./db")
 app.use(cors(
   {
-    origin: "http://localhost:3000"
+    origin: "https://foodx-ultimate-priyam-chakrabortys-projects.vercel.app/"
   }
 ));
 app.use((req, res, next) => {
